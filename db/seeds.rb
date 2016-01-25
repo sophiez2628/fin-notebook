@@ -7,3 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 fin = User.create({email: "miriam@makeba.dance", password: "patapata"})
+note1 = Note.create({text: "test1", user_id: fin.id, lat: 37.408166, lng: -122.099880})
+note2 = Note.create({text: "test2", user_id: fin.id, lat: 37.308836, lng: -122.000216})

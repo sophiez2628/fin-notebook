@@ -22,9 +22,10 @@ class NotesController < ApplicationController
   end
 
   def index
-    debugger;
     if current_user && params[:radius] && params[:lat] && params[:lng]
-      render json: Note.all
+      render json: Note.find_based_on_radius({radius: params[:radius],
+                                              lat: params[:lat],
+                                              lng: params[:lng]})
     elsif current_user
       render json: Note.all
     else
