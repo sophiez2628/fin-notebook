@@ -1,6 +1,10 @@
 class SessionsController < ApplicationController
   def new
-    render :new
+    if current_user
+      render json: current_user
+    else
+      render :new
+    end
   end
 
   def create
