@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   def new
     if current_user
-      render json: current_user
+      redirect_to user_url(current_user.id)
     else
       render :new
     end
@@ -12,12 +12,10 @@ class SessionsController < ApplicationController
       params[:user][:email],
       params[:user][:password]
     )
-
     if user
       sign_in(user)
-      render json: user
+      redirect_to user_url(user.id)
     else
-      flash.now[:errors] = ["Invalid username or password"]
       render :new
     end
   end

@@ -1,0 +1,57 @@
+html, body, img, h1, ul, li, p, a, span, video, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  text-align: inherit;
+  box-sizing: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.1;
+}
+
+form {
+  width: 50%;
+  margin: 20px auto;
+  border: 2px solid black;
+}
+
+.note-form input {
+  width: 25%;
+}
+
+textarea {
+  width: 25%;
+  float: left;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 35px;
+  display: block;
+  float: left;
+  width: 33.3333333333333%;
+}
+
+.submit-button {
+  cursor: pointer;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}

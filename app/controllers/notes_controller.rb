@@ -14,11 +14,14 @@ class NotesController < ApplicationController
                          user_id: current_user.id});
 
     if new_note.save
-      render json: new_note
+      redirect_to note_url(new_note.id)
     else
-      flash.now[:errors] = ["Missing Info"]
       render :new
     end
+  end
+
+  def show
+    render json: Note.find(params[:id].to_i)
   end
 
   def index

@@ -1,9 +1,11 @@
-
+<h1>Sign In</h1>
 <div class="sign-in">
-  <form action="<%= session_url %>" method="post" >
+  <form action="<%= session_url %>" method="post" class="group" >
     <%= auth_token_input %>
-    <input type="text" name="user[email]" value="" placeholder="email">
-    <input type="password" name="user[password]" placeholder="password">
-    <input type="submit" value="Sign In">
+      <input type="text" name="user[email]" value="" placeholder="email">
+
+      <input type="password" name="user[password]" placeholder="password">
+
+      <input type="submit" value="Sign In" class="submit-button">
   </form>
 </div>

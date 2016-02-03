@@ -1,10 +1,11 @@
+<h1>Create Note</h1>
 <div class="create-note">
-  <form action="<%= notes_url %>" method="post" >
+  <form action="<%= notes_url %>" method="post" class="group note-form">
     <%= auth_token_input %>
     <textarea name="note[text]">
     </textarea>
     <input name="note[lat]" placeholder="lat">
     <input name="note[lng]" placeholder="lat">
-    <input type="submit" value="Create Note">
+    <input type="submit" value="Create Note" class="submit-button">
   </form>
 </div>

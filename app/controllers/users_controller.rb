@@ -9,9 +9,12 @@ class UsersController < ApplicationController
      sign_in(@user)
      redirect_to root_url
    else
-     flash.now[:errors] = @user.errors.full_messages
      render :new
    end
+  end
+
+  def show
+    render json: User.find(params[:id].to_i)
   end
 
   private
